@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/navigation_classlist">
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.psphyo.kotoba.fragment.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home">
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_classlist"
+        android:name="com.psphyo.kotoba.fragment.CLassListFragment"
+        android:label="ClassListFragment"
+        tools:layout="@layout/fragment_classlist">
+        <action
+            android:id="@+id/action_navigation_class_data_to_weeklist"
+            app:destination="@id/navigation_weeklist" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_weeklist"
+        android:name="com.psphyo.kotoba.fragment.WeekListFragment"
+        android:label="WeeklistFragment"
+        tools:layout="@layout/fragment_weeklist">
+        <action
+            android:id="@+id/action_navigation_class_day_to_kotoba"
+            app:destination="@id/navigation_kotoba" />
+
+        <argument
+            android:name="level"
+            app:argType="string"
+            app:nullable="true" />
+
+        <argument
+            android:name="week"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_kotoba"
+        android:name="com.psphyo.kotoba.fragment.KotobaFragment"
+        android:label="KotobaFragment"
+        tools:layout="@layout/fragment_kotoba">
+        <argument
+            android:name="level"
+            app:argType="string"
+            app:nullable="true" />
+
+        <argument
+            android:name="week"
+            app:argType="string"
+            app:nullable="true" />
+
+        <argument
+            android:name="day"
+            app:argType="string"
+            app:nullable="true" />
+
+    </fragment>
+</navigation>

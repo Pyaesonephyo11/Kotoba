@@ -1,0 +1,811 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.psphyo.kotoba.fragment.CLassListFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="20dp">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="vertical">
+
+<!--                    <TextView-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="" />-->
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginTop="40dp"
+                            android:layout_marginBottom="20dp"
+                            android:minHeight="200dp"
+                            app:cardBackgroundColor="#3F51B5"
+                            app:cardCornerRadius="16dp"
+                            app:cardElevation="2dp"
+                            app:cardPreventCornerOverlap="false">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:orientation="vertical"
+                                android:padding="10dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Learn to \n Japanese  Vocabulary"
+                                    android:textColor="#CCBBBB"
+                                    android:textSize="17sp"
+                                    android:textStyle="bold" />
+
+                                <ProgressBar
+                                    style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+                                    android:layout_width="150dp"
+                                    android:layout_height="5dp"
+                                    android:layout_marginTop="15dp"
+                                    android:progress="60"
+                                    android:progressDrawable="@drawable/progress_drawable" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="15dp"
+                                    android:text="60% Complete"
+                                    android:textColor="#CCBBBB"
+                                    android:textSize="13sp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <ImageView
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:adjustViewBounds="true"
+                            android:cropToPadding="true"
+                            android:elevation="4dp"
+                            android:src="@drawable/header_image" />
+
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginLeft="60dp"
+                            android:background="@drawable/refer_earn_button"
+                            android:gravity="center">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="5dp"
+                                android:paddingBottom="5dp"
+                                android:text="Refer your friends and\n learn vocabulary *"
+                                android:textAlignment="center"
+                                android:textColor="#fff"
+                                android:textSize="13sp" />
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            android:cropToPadding="true"
+                            android:src="@drawable/refer_icon" />
+
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:text=" N2 level"
+                            android:textColor="#858282"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:text="see all....."
+                            android:textColor="#858282"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="none">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+<!--                            <include layout="@layout/card_popular_course" />-->
+
+                            <androidx.cardview.widget.CardView android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                xmlns:android="http://schemas.android.com/apk/res/android"
+                                xmlns:app="http://schemas.android.com/apk/res-auto"
+                                android:minHeight="150dp"
+                                app:cardElevation="2dp"
+                                app:cardBackgroundColor="#3F51B5"
+                                app:cardCornerRadius="16dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginTop="20dp"
+                                android:id="@+id/n2_week1"
+                                android:layout_marginBottom="20dp">
+
+                                <!--    app:cardElevation="10dp"-->
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_gravity="center">
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:adjustViewBounds="true"
+                                        android:cropToPadding="true"
+                                        android:maxWidth="100dp"
+                                        android:src="@drawable/education_1" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:text="Week One"
+                                        android:textColor="#F1DADA"
+                                        android:textSize="16sp"
+                                        android:textStyle="bold"
+                                        android:layout_marginBottom="10dp"/>
+
+                                </LinearLayout>
+                            </androidx.cardview.widget.CardView>
+                            <androidx.cardview.widget.CardView android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                xmlns:android="http://schemas.android.com/apk/res/android"
+                                xmlns:app="http://schemas.android.com/apk/res-auto"
+                                android:minHeight="150dp"
+                                app:cardElevation="2dp"
+                                app:cardBackgroundColor="#3F51B5"
+                                app:cardCornerRadius="16dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginTop="20dp"
+                                android:id="@+id/n2_week2"
+                                android:layout_marginBottom="20dp">
+
+                                <!--    app:cardElevation="10dp"-->
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_gravity="center">
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:adjustViewBounds="true"
+                                        android:cropToPadding="true"
+                                        android:maxWidth="100dp"
+                                        android:src="@drawable/education_1" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:text="WeeK Two"
+                                        android:textColor="#F1DADA"
+                                        android:textSize="16sp"
+                                        android:textStyle="bold"
+                                        android:layout_marginBottom="10dp"/>
+
+                                </LinearLayout>
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                xmlns:android="http://schemas.android.com/apk/res/android"
+                                xmlns:app="http://schemas.android.com/apk/res-auto"
+                                android:minHeight="150dp"
+                                app:cardElevation="2dp"
+                                app:cardBackgroundColor="#3F51B5"
+                                app:cardCornerRadius="16dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginTop="20dp"
+                                android:id="@+id/n2_week3"
+                                android:layout_marginBottom="20dp">
+
+                                <!--    app:cardElevation="10dp"-->
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_gravity="center">
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:adjustViewBounds="true"
+                                        android:cropToPadding="true"
+                                        android:maxWidth="100dp"
+                                        android:src="@drawable/education_1" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:text="Week Three"
+                                        android:textColor="#F1DADA"
+                                        android:textSize="16sp"
+                                        android:textStyle="bold"
+                                        android:layout_marginBottom="10dp"/>
+
+                                </LinearLayout>
+                            </androidx.cardview.widget.CardView>
+                            <androidx.cardview.widget.CardView android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                xmlns:android="http://schemas.android.com/apk/res/android"
+                                xmlns:app="http://schemas.android.com/apk/res-auto"
+                                android:minHeight="150dp"
+                                app:cardElevation="2dp"
+                                app:cardBackgroundColor="#3F51B5"
+                                app:cardCornerRadius="16dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginTop="20dp"
+                                android:id="@+id/n2_week4"
+                                android:layout_marginBottom="20dp">
+
+                                <!--    app:cardElevation="10dp"-->
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_gravity="center">
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:adjustViewBounds="true"
+                                        android:cropToPadding="true"
+                                        android:maxWidth="100dp"
+                                        android:src="@drawable/education_1" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:text="Week Four"
+                                        android:textColor="#F1DADA"
+                                        android:textSize="16sp"
+                                        android:textStyle="bold"
+                                        android:layout_marginBottom="10dp"/>
+
+                                </LinearLayout>
+                            </androidx.cardview.widget.CardView>
+                            <androidx.cardview.widget.CardView android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                xmlns:android="http://schemas.android.com/apk/res/android"
+                                xmlns:app="http://schemas.android.com/apk/res-auto"
+                                android:minHeight="150dp"
+                                app:cardElevation="2dp"
+                                app:cardBackgroundColor="#3F51B5"
+                                app:cardCornerRadius="16dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginTop="20dp"
+                                android:id="@+id/n2_week5"
+                                android:layout_marginBottom="20dp">
+
+                                <!--    app:cardElevation="10dp"-->
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_gravity="center">
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:adjustViewBounds="true"
+                                        android:cropToPadding="true"
+                                        android:maxWidth="100dp"
+                                        android:src="@drawable/education_1" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:text="Week Five"
+                                        android:textColor="#F1DADA"
+                                        android:textSize="16sp"
+                                        android:textStyle="bold"
+                                        android:layout_marginBottom="10dp"/>
+
+                                </LinearLayout>
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                xmlns:android="http://schemas.android.com/apk/res/android"
+                                xmlns:app="http://schemas.android.com/apk/res-auto"
+                                android:minHeight="150dp"
+                                app:cardElevation="2dp"
+                                app:cardBackgroundColor="#3F51B5"
+                                app:cardCornerRadius="16dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginTop="20dp"
+                                android:id="@+id/n2_week6"
+                                android:layout_marginBottom="20dp">
+
+                                <!--    app:cardElevation="10dp"-->
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_gravity="center">
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:adjustViewBounds="true"
+                                        android:cropToPadding="true"
+                                        android:maxWidth="100dp"
+                                        android:src="@drawable/education_1" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:text="Week Six"
+                                        android:textColor="#F1DADA"
+                                        android:textSize="16sp"
+                                        android:textStyle="bold"
+                                        android:layout_marginBottom="10dp"/>
+
+                                </LinearLayout>
+                            </androidx.cardview.widget.CardView>
+                            <androidx.cardview.widget.CardView android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                xmlns:android="http://schemas.android.com/apk/res/android"
+                                xmlns:app="http://schemas.android.com/apk/res-auto"
+                                android:minHeight="150dp"
+                                app:cardElevation="2dp"
+                                app:cardBackgroundColor="#3F51B5"
+                                app:cardCornerRadius="16dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginTop="20dp"
+                                android:id="@+id/n2_week7"
+                                android:layout_marginBottom="20dp">
+
+                                <!--    app:cardElevation="10dp"-->
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_gravity="center">
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:adjustViewBounds="true"
+                                        android:cropToPadding="true"
+                                        android:maxWidth="100dp"
+                                        android:src="@drawable/education_1" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:text="Week Seven"
+                                        android:textColor="#F1DADA"
+                                        android:textSize="16sp"
+                                        android:textStyle="bold"
+                                        android:layout_marginBottom="10dp"/>
+
+                                </LinearLayout>
+                            </androidx.cardview.widget.CardView>
+                            <androidx.cardview.widget.CardView android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                xmlns:android="http://schemas.android.com/apk/res/android"
+                                xmlns:app="http://schemas.android.com/apk/res-auto"
+                                android:minHeight="150dp"
+                                app:cardElevation="2dp"
+                                app:cardBackgroundColor="#3F51B5"
+                                app:cardCornerRadius="16dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginTop="20dp"
+                                android:id="@+id/n2_week8"
+                                android:layout_marginBottom="20dp">
+
+                                <!--    app:cardElevation="10dp"-->
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_gravity="center">
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:adjustViewBounds="true"
+                                        android:cropToPadding="true"
+                                        android:maxWidth="100dp"
+                                        android:src="@drawable/education_1" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:text="Week Eight"
+                                        android:textColor="#F1DADA"
+                                        android:textSize="16sp"
+                                        android:textStyle="bold"
+                                        android:layout_marginBottom="10dp"/>
+
+                                </LinearLayout>
+                            </androidx.cardview.widget.CardView>
+                        </LinearLayout>
+                    </HorizontalScrollView>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:text=" N3 level"
+                            android:textColor="#858282"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:text="see all....."
+                            android:textColor="#858282"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="none">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+                            <!--                            <include layout="@layout/card_popular_course" />-->
+
+                            <androidx.cardview.widget.CardView android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                xmlns:android="http://schemas.android.com/apk/res/android"
+                                xmlns:app="http://schemas.android.com/apk/res-auto"
+                                android:minHeight="150dp"
+                                app:cardElevation="2dp"
+                                app:cardBackgroundColor="#3F51B5"
+                                app:cardCornerRadius="16dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginTop="20dp"
+                                android:id="@+id/n3_week1"
+                                android:layout_marginBottom="20dp">
+
+                                <!--    app:cardElevation="10dp"-->
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_gravity="center">
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:adjustViewBounds="true"
+                                        android:cropToPadding="true"
+                                        android:maxWidth="100dp"
+                                        android:src="@drawable/android_developer" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:text="Week One"
+                                        android:textColor="#F1DADA"
+                                        android:textSize="16sp"
+                                        android:textStyle="bold"
+                                        android:layout_marginBottom="10dp"/>
+
+                                </LinearLayout>
+                            </androidx.cardview.widget.CardView>
+                            <androidx.cardview.widget.CardView android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                xmlns:android="http://schemas.android.com/apk/res/android"
+                                xmlns:app="http://schemas.android.com/apk/res-auto"
+                                android:minHeight="150dp"
+                                app:cardElevation="2dp"
+                                app:cardBackgroundColor="#3F51B5"
+                                app:cardCornerRadius="16dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginTop="20dp"
+                                android:id="@+id/n3_week2"
+                                android:layout_marginBottom="20dp">
+
+                                <!--    app:cardElevation="10dp"-->
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_gravity="center">
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:adjustViewBounds="true"
+                                        android:cropToPadding="true"
+                                        android:maxWidth="100dp"
+                                        android:src="@drawable/android_developer" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:text="WeeK Two"
+                                        android:textColor="#F1DADA"
+                                        android:textSize="16sp"
+                                        android:textStyle="bold"
+                                        android:layout_marginBottom="10dp"/>
+
+                                </LinearLayout>
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                xmlns:android="http://schemas.android.com/apk/res/android"
+                                xmlns:app="http://schemas.android.com/apk/res-auto"
+                                android:minHeight="150dp"
+                                app:cardElevation="2dp"
+                                app:cardBackgroundColor="#3F51B5"
+                                app:cardCornerRadius="16dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginTop="20dp"
+                                android:id="@+id/n3_week3"
+                                android:layout_marginBottom="20dp">
+
+                                <!--    app:cardElevation="10dp"-->
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_gravity="center">
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:adjustViewBounds="true"
+                                        android:cropToPadding="true"
+                                        android:maxWidth="100dp"
+                                        android:src="@drawable/android_developer" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:text="Week Three"
+                                        android:textColor="#F1DADA"
+                                        android:textSize="16sp"
+                                        android:textStyle="bold"
+                                        android:layout_marginBottom="10dp"/>
+
+                                </LinearLayout>
+                            </androidx.cardview.widget.CardView>
+                            <androidx.cardview.widget.CardView android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                xmlns:android="http://schemas.android.com/apk/res/android"
+                                xmlns:app="http://schemas.android.com/apk/res-auto"
+                                android:minHeight="150dp"
+                                app:cardElevation="2dp"
+                                app:cardBackgroundColor="#3F51B5"
+                                app:cardCornerRadius="16dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginTop="20dp"
+                                android:id="@+id/n3_week4"
+                                android:layout_marginBottom="20dp">
+
+                                <!--    app:cardElevation="10dp"-->
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_gravity="center">
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:adjustViewBounds="true"
+                                        android:cropToPadding="true"
+                                        android:maxWidth="100dp"
+                                        android:src="@drawable/android_developer" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:text="Week Four"
+                                        android:textColor="#F1DADA"
+                                        android:textSize="16sp"
+                                        android:textStyle="bold"
+                                        android:layout_marginBottom="10dp"/>
+
+                                </LinearLayout>
+                            </androidx.cardview.widget.CardView>
+                            <androidx.cardview.widget.CardView android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                xmlns:android="http://schemas.android.com/apk/res/android"
+                                xmlns:app="http://schemas.android.com/apk/res-auto"
+                                android:minHeight="150dp"
+                                app:cardElevation="2dp"
+                                app:cardBackgroundColor="#3F51B5"
+                                app:cardCornerRadius="16dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginTop="20dp"
+                                android:id="@+id/n3_week5"
+                                android:layout_marginBottom="20dp">
+
+                                <!--    app:cardElevation="10dp"-->
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_gravity="center">
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:adjustViewBounds="true"
+                                        android:cropToPadding="true"
+                                        android:maxWidth="100dp"
+                                        android:src="@drawable/android_developer" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:text="Week Five"
+                                        android:textColor="#F1DADA"
+                                        android:textSize="16sp"
+                                        android:textStyle="bold"
+                                        android:layout_marginBottom="10dp"/>
+
+                                </LinearLayout>
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                xmlns:android="http://schemas.android.com/apk/res/android"
+                                xmlns:app="http://schemas.android.com/apk/res-auto"
+                                android:minHeight="150dp"
+                                app:cardElevation="2dp"
+                                app:cardBackgroundColor="#3F51B5"
+                                app:cardCornerRadius="16dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginTop="20dp"
+                                android:id="@+id/n3_week6"
+                                android:layout_marginBottom="20dp">
+
+                                <!--    app:cardElevation="10dp"-->
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_gravity="center">
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:adjustViewBounds="true"
+                                        android:cropToPadding="true"
+                                        android:maxWidth="100dp"
+                                        android:src="@drawable/android_developer" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:text="Week Six"
+                                        android:textColor="#F1DADA"
+                                        android:textSize="16sp"
+                                        android:textStyle="bold"
+                                        android:layout_marginBottom="10dp"/>
+
+                                </LinearLayout>
+                            </androidx.cardview.widget.CardView>
+                        </LinearLayout>
+                    </HorizontalScrollView>
+
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+</layout>

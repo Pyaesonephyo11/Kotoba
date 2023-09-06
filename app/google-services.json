@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "887723167409",
+    "project_id": "kotaba-4fdef",
+    "storage_bucket": "kotaba-4fdef.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:887723167409:android:39fb0662310f2378c7dc90",
+        "android_client_info": {
+          "package_name": "com.psphyo.kotoba"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "887723167409-doiaa4f6iu417ssvbd8k9gjekflahjl1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCeNS7-6efMA-INTUfPIn9KN13_czI11YE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "887723167409-doiaa4f6iu417ssvbd8k9gjekflahjl1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

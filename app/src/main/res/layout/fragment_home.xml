@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/etlevel"
+            android:layout_width="219dp"
+            android:layout_height="44dp"
+            android:ems="10"
+            android:hint="Enter Level"
+            android:inputType="textPersonName"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.395"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.108" />
+
+        <Button
+            android:id="@+id/btnupload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="416dp"
+            android:text="Upload"
+            app:layout_constraintEnd_toEndOf="@+id/etlevel"
+            app:layout_constraintHorizontal_bias="0.96"
+            app:layout_constraintStart_toStartOf="@+id/etlevel"
+            app:layout_constraintTop_toBottomOf="@+id/etlevel" />
+
+        <EditText
+            android:id="@+id/etweek"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="Enter Week"
+            app:layout_constraintEnd_toEndOf="@+id/etlevel"
+            app:layout_constraintHorizontal_bias="0.444"
+            app:layout_constraintStart_toStartOf="@+id/etlevel"
+            app:layout_constraintTop_toBottomOf="@+id/etlevel" />
+
+        <EditText
+            android:id="@+id/etday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="Enter Day"
+            app:layout_constraintEnd_toEndOf="@+id/etweek"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/etweek"
+            app:layout_constraintTop_toBottomOf="@+id/etweek" />
+
+        <EditText
+            android:id="@+id/etjp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:ems="10"
+            android:hint="Enter kotoba"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="@+id/etday"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/etday"
+            app:layout_constraintTop_toBottomOf="@+id/etday" />
+
+        <EditText
+            android:id="@+id/eten"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:ems="10"
+            android:hint="Enter hiragana"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="@+id/etjp"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/etjp"
+            app:layout_constraintTop_toBottomOf="@+id/etjp" />
+
+        <EditText
+            android:id="@+id/etmm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="4dp"
+            android:ems="10"
+            android:hint="Enter myanmar"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="@+id/eten"
+            app:layout_constraintTop_toBottomOf="@+id/eten" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>
