@@ -19,6 +19,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.ValueEventListener
 import com.google.firebase.database.ktx.database
 import com.google.firebase.database.ktx.getValue
@@ -38,6 +39,13 @@ class KotobaFragment : Fragment() {
     private lateinit var linearLayoutManager: LinearLayoutManager
     var listData:ArrayList<GoiData> = ArrayList()
 
+    private lateinit var databaseReference:DatabaseReference
+
+    private var currentPage = 1
+    private val pageSize = 10
+
+
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -45,7 +53,7 @@ class KotobaFragment : Fragment() {
     ): View? {
 
 
-    // return super.onCreateView(inflater, container, savedInstanceState)
+        // return super.onCreateView(inflater, container, savedInstanceState)
         binding= FragmentKotobaBinding.inflate(inflater,container,false)
 
         linearLayoutManager=LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
@@ -57,48 +65,49 @@ class KotobaFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        getData()
-       // getSelectData()
+       // getData()
+        if(args.level.equals("N5") || args.level.equals("N4"))
+        {
+            loadData()
+        }else{
+            getData()
+        }
+
+
+
+        // getSelectData()
 
         binding.edtSearch.setOnEditorActionListener(TextView.OnEditorActionListener { v, actionId, event ->
             if (actionId == EditorInfo.IME_ACTION_SEARCH) {
                 performSearch()
-               // Toast.makeText(requireContext(), binding.etSearch.text.toString(), Toast.LENGTH_SHORT).show()
+                // Toast.makeText(requireContext(), binding.etSearch.text.toString(), Toast.LENGTH_SHORT).show()
                 goiAdapter.filter.filter(binding.edtSearch.text.toString())
                 return@OnEditorActionListener true
             }
             false
         })
 
-//        binding.searchBar.setOnQueryTextListener(object : SearchView.OnQueryTextListener,
-//            androidx.appcompat.widget.SearchView.OnQueryTextListener {
-//            override fun onQueryTextSubmit(p0: String?): Boolean {
-//                goiAdapter.filter.filter(p0)
-//                return true
-//
-//            }
-//
-//            override fun onQueryTextChange(p0: String?): Boolean {
-//                goiAdapter.filter.filter(p0)
-//                return true
-//            }
-//
-//        })
 
     }
 
-    private fun getSelectData() {
+    private fun loadData() {
+
         binding.progressBar.visibility=View.VISIBLE
         val database=Firebase.database
-        val ref=database.getReference("/${args.level}/${args.week}/${args.day}")
-        val query=ref.orderByChild("datetime")
-        query.addValueEventListener(object :ValueEventListener{
+        val ref=database.getReference("/${args.level}/${args.day}")
+        val query=ref.orderByChild("mm")
+        query.addListenerForSingleValueEvent(object :ValueEventListener{
             @SuppressLint("NewApi")
             override fun onDataChange(snapshot: DataSnapshot) {
 
                 try {
                     snapshot.children.forEach {
                         val data=it.getValue<GoiData>()
+                        listData.add(data!!)
+                        goiAdapter=GoiAdapter(requireContext(),listData)
+                        binding.recyclerKotoba.adapter=goiAdapter
+
+                        binding.progressBar.visibility=View.GONE
 
                     }
                 }catch (e:Exception){
@@ -116,6 +125,8 @@ class KotobaFragment : Fragment() {
     }
 
     private fun getData() {
+
+        val level=args.level
         binding.progressBar.visibility=View.VISIBLE
         val database=Firebase.database
         val ref=database.getReference("/${args.level}/${args.week}/${args.day}")
@@ -138,15 +149,17 @@ class KotobaFragment : Fragment() {
                     Log.d("msg","not success$e")
                 }
 
-                }
+            }
 
             override fun onCancelled(error: DatabaseError) {
-                
+
             }
 
         })
 
     }
+
+
     private fun performSearch() {
         binding.edtSearch.clearFocus()
         val i = requireContext().getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager

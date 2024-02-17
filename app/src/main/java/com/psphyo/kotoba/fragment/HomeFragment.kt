@@ -48,7 +48,7 @@ class HomeFragment : Fragment(), View.OnClickListener {
             val goiData= GoiData(level,week,day,jp,en,mm)
             val myRef = database.getReference("/$level/$week/$day/$jp")
             myRef.setValue(goiData).addOnSuccessListener {
-                Toast.makeText(context,"success", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context,"upload successful", Toast.LENGTH_SHORT).show()
             }
         }
 

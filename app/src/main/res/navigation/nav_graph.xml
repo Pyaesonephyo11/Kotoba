@@ -10,6 +10,20 @@
         android:label="HomeFragment"
         tools:layout="@layout/fragment_home">
     </fragment>
+
+    <fragment
+        android:id="@+id/navigation_kanji"
+        android:name="com.psphyo.kotoba.fragment.KanjiFragment"
+        android:label="Kanji"
+        tools:layout="@layout/fragment_kanji"
+        />
+
+    <fragment
+        android:id="@+id/navigation_grammar"
+        android:name="com.psphyo.kotoba.fragment.GrammarFragment"
+        android:label="Grammar"
+        tools:layout="@layout/fragment_grammar"
+        />
     <fragment
         android:id="@+id/navigation_classlist"
         android:name="com.psphyo.kotoba.fragment.CLassListFragment"

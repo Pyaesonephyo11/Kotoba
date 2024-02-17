@@ -46,6 +46,9 @@ class CLassListFragment :Fragment(), View.OnClickListener {
         binding.n3Week4.setOnClickListener(this)
         binding.n3Week5.setOnClickListener(this)
         binding.n3Week6.setOnClickListener(this)
+
+        binding.n4.setOnClickListener(this)
+        binding.n5.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -64,6 +67,9 @@ class CLassListFragment :Fragment(), View.OnClickListener {
             R.id.n3_week4->  findNavController().navigate(CLassListFragmentDirections.actionNavigationClassDataToWeeklist("N3","WeekFour"))
             R.id.n3_week5->  findNavController().navigate(CLassListFragmentDirections.actionNavigationClassDataToWeeklist("N3","WeekFive"))
             R.id.n3_week6->  findNavController().navigate(CLassListFragmentDirections.actionNavigationClassDataToWeeklist("N3","WeekSix"))
+
+            R.id.n4-> findNavController().navigate(CLassListFragmentDirections.actionNavigationClassDataToWeeklist("N4",""))
+            R.id.n5-> findNavController().navigate(CLassListFragmentDirections.actionNavigationClassDataToWeeklist("N5",""))
         }
     }
 }
