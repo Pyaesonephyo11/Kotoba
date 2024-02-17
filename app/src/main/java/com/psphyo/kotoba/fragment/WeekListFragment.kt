@@ -1,35 +1,20 @@
 package com.psphyo.kotoba.fragment
 
 import android.annotation.SuppressLint
-import android.content.Context
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.inputmethod.EditorInfo
-import android.view.inputmethod.InputMethodManager
 import android.widget.ImageView
-import android.widget.TextView.OnEditorActionListener
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
-import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.DatabaseError
-import com.google.firebase.database.ValueEventListener
-import com.google.firebase.database.ktx.database
-import com.google.firebase.database.ktx.getValue
-import com.google.firebase.ktx.Firebase
 import com.psphyo.kotoba.CoursesItemClickListener
 import com.psphyo.kotoba.R
 import com.psphyo.kotoba.adapter.CourseRecyclerAdapter
-import com.psphyo.kotoba.adapter.GoiAdapter
 import com.psphyo.kotoba.databinding.FragmentWeeklistBinding
 import com.psphyo.kotoba.model.CourseCard
-import com.psphyo.kotoba.model.GoiData
 import java.util.*
 
 class WeekListFragment : Fragment(), CoursesItemClickListener {
@@ -41,16 +26,13 @@ class WeekListFragment : Fragment(), CoursesItemClickListener {
 
     private val args: WeekListFragmentArgs by navArgs()
 
-    private var ctitle=""
-
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
        //
-    // return super.onCreateView(inflater, container, savedInstanceState)
+      // return super.onCreateView(inflater, container, savedInstanceState)
         binding= FragmentWeeklistBinding.inflate(inflater,container,false)
         return binding.root
     }
@@ -62,6 +44,7 @@ class WeekListFragment : Fragment(), CoursesItemClickListener {
 
 
         binding.tvLevel.text=args.level+"  "+args.week
+
         var layoutManager = StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
         binding.rvCourses.layoutManager = layoutManager
         binding.rvCourses.clipToPadding = false

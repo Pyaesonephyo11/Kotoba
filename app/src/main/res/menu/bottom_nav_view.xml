@@ -15,6 +15,6 @@
         android:title="Kanji" />
     <item
         android:id="@+id/navigation_grammar"
-        android:icon="@drawable/ic_sort"
+        android:icon="@drawable/grammar"
         android:title="Grammar" />
 </menu>

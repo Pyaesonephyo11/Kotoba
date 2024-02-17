@@ -22,7 +22,17 @@
         android:id="@+id/navigation_grammar"
         android:name="com.psphyo.kotoba.fragment.GrammarFragment"
         android:label="Grammar"
-        tools:layout="@layout/fragment_grammar"
+        tools:layout="@layout/fragment_grammar">
+        <action
+            android:id="@+id/action_nav_grammar_to_grammardetail"
+            app:destination="@+id/navigation_detailgrammar"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_detailgrammar"
+        android:name="com.psphyo.kotoba.fragment.GrammarDetailFragment"
+        android:label="Grammar List"
+        tools:layout="@layout/fragment_grammardetail"
         />
     <fragment
         android:id="@+id/navigation_classlist"

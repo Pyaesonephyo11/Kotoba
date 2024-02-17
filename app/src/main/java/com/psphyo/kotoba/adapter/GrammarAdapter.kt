@@ -6,15 +6,15 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.psphyo.kotoba.CoursesItemClickListener
 import com.psphyo.kotoba.databinding.ItemCardBinding
-import com.psphyo.kotoba.fragment.WeekListFragment
+import com.psphyo.kotoba.fragment.GrammarFragment
 import com.psphyo.kotoba.model.CourseCard
 
-class CourseRecyclerAdapter(
+class GrammarAdapter(
     var mContext: Context,
     mData: List<CourseCard>,
-    listener: WeekListFragment
+    listener: GrammarFragment
 ) :
-    RecyclerView.Adapter<CourseRecyclerAdapter._ViewHolder>() {
+    RecyclerView.Adapter<GrammarAdapter._ViewHolder>() {
     private val mData: List<CourseCard>
     private val coursesItemClickListener: CoursesItemClickListener
     override fun onCreateViewHolder(viewGroup: ViewGroup, i: Int): _ViewHolder {
